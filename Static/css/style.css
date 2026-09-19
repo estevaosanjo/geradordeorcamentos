@@ -1,5 +1,61 @@
 *{
-    margin: 0;;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 10;
+    padding: 10;
+    font-family:"Montserrat",sans-serif;
 }
+
+.pagina  {
+    font-size: 15px;
+}
+
+.cabecalho {
+    padding: 20px;
+    width: 100%;
+}
+
+#logo{
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font: "Montserrat", sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formatos{
+    padding-top: 10px;
+    padding-bottom: 20px;
+
+}
+
+.dados_empresa{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#nome_empresa{
+    box-shadow: 1px 1px 3px #d46b6b;
+    border-radius: 6px;
+    border: none;
+}
+
+#cnpj{
+    padding-left: 5px;
+    box-shadow: 1px 1px 3px #d46b6b;
+    border-radius: 6px;
+    border: none;
+}
+
+button[type="submit"]{
+    box-shadow: 0 1px 3px  #d46b6b;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Responsividade 
+@media (max-width: 768px) {
+
+}
+*/
