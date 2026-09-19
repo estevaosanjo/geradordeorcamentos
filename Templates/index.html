@@ -4,16 +4,59 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
         <title>Gerador de orçamentos</title>  
-        <link rel="stylesheet" href="style.css">
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap"
         rel="stylesheet">
 
     </head>
         <body>
-            <div class="titulo">
-                <p>Gerador de orçamentos</p>
+            <div class="pagina">
+
+                <header class = "cabecalho">
+
+                    <form action="gerar_orcamento" method="post" enctype="multipart/form-data">
+                        
+                        <div class="logo">
+                            <label for="logo">Logo da empresa</label>
+                            <input type="file" id="logo" name="logo" accept="image/png, image/jpeg, image/webp">
+                            <small class="formatos">Formatos aceito: PNG, JPEG, WEBP</small>
+                        </div>
+
+                    </form>
+
+                    <div class="dados_empresa">
+                        
+                        <label for="nome_empresa">Nome da empresa</label>
+                        <input type="text" id="nome_empresa" name="nome_empresa" placeholder="Nome da empresa">
+                       
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" id="cnpj" name="CNPJ" placeholder="Digite o CNPJ">
+                    
+                    </div>
+                    
+                    <div class="contatos">
+                    
+                        <label for="email">Email</label>
+                        <label for="whatsapp">Whatsapp</label>
+                        <label for="instagram">Instagram</label>
+                        <label for="website">Website</label>
+                    
+                    </div>
+
+                    <button type="submit">Gerar orçamento</button>
+
+                </header>
+
+                <div class="conteudo">
+                    
+                </div>
+
             </div>
+
             <script src="{{ url_for('static', filename='js/script.js') }}"></script>
         </body>
 </html>
