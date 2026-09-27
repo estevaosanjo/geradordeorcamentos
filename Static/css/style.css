@@ -1,55 +1,52 @@
 *{
-    margin: 10;
-    padding: 10;
     font-family:"Montserrat",sans-serif;
+    padding:20px;
+    display: center;
+    justify-content:center;
 }
 
 .pagina  {
+    width:198mm;
+    min-height:286mm;
+    background:#fff;
+    border:2px solid #d3cf04;
     font-size: 15px;
 }
 
 .cabecalho {
-    padding: 20px;
     width: 100%;
 }
 
 #logo{
     display: block;
-    padding-top: 10px;
-    padding-bottom: 10px;
     font: "Montserrat", sans-serif;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .formatos{
-    padding-top: 10px;
-    padding-bottom: 20px;
-
 }
 
 .dados_empresa{
-    padding-top: 10px;
-    padding-bottom: 10px;
+    font-size: 12px;
+    gap: 2px;
 }
 
 #nome_empresa{
+
     box-shadow: 1px 1px 3px #d46b6b;
     border-radius: 6px;
     border: none;
 }
 
 #cnpj{
-    padding-left: 5px;
     box-shadow: 1px 1px 3px #d46b6b;
     border-radius: 6px;
     border: none;
 }
 
 .contatos{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 5px;
+    font-size: 12px;
     box-shadow: 1px 1px 3px #d46b6b;
     border-radius: 6px;
     border: none;
@@ -57,6 +54,52 @@
 
 button[type="submit"]{
     box-shadow: 0 1px 3px  #d46b6b;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.conteudo{
+
+}
+
+.title {
+    text-align: center;
+    font-size: 43px;
+}
+
+.dados_cliente {
+    font-size: 12px;
+    display: flex;
+}
+.campo_cliente{
+    box-shadow: 1px 1px 3px #d46b6b;
+}
+.quantidade_orc{
+    padding-left: 2%;
+    box-shadow: 1px 1px 3px #d46b6b;
+}
+.data_orc{
+    padding-left: 2%;
+    box-shadow: 1px 1px 3px #d46b6b;
+}
+
+
+.adicionar_servico{
+    font-size: 16px;
+    padding-top: 10%;
+    color: #ffffff;
+    box-shadow: 0 1px 3px  #f3c704;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.remover_servico{
+    font-size: 16px;
+    padding-left: 10%;
+    color: #ffffff;
+    box-shadow: 0 1px 3px  #f52929;
     border-radius: 5px;
     border: none;
     cursor: pointer;
