@@ -61,21 +61,21 @@
                 <div class="conteudo">
                     
                     <div class="titulo">
-                        <h1>Orçamento</h1>
-                        <p>Preencha os campos abaixo para gerar o orçamento da sua empresa.</p>
+                        <h1 class = "title">Orçamento</h1>
+                        <p class = "subtitle">Preencha os campos abaixo para gerar o orçamento da sua empresa.</p>
                     </div>
 
                     <div class="dados_cliente">
                         <div class="campo_cliente">
-                            //nome
+                            <input type="text" id="nome_cliente" name="nome_cliente" placeholder="Nome do cliente">
                         </div>
                         
                         <div class="quantidade_orc">
-                            //numero orcamento
+                            <input type="text" id="quantidade_orc" name="quantidade_orc" placeholder="Quantidade">
                         </div>
 
                         <div class="data_orc">
-                            //data orcamento
+                            <input type="text" id="data_orc" name="data_orc" placeholder="Data do orçamento">
                         </div>
                     </div>
 
@@ -84,20 +84,50 @@
                         <table>
 
                             <thead>
+
                                 <th>Descrição</th>
+
                                 <th>Quantidade</th>
+
                                 <th>Valor Unitário</th>
+
                                 <th>Valor Total</th>
+
                             </thead>
 
-
+                            <button type="button" id="adicionar-servico">Adicionar Serviço</button>
+                            <button type="button" id="remover-servico">Remover Serviço</button>
 
                         </table>
+
+
                     </section>
 
+                    <section class ="cards-orcamento">
 
+                        <div class="forma-pagamento">
+
+                        </div>
+
+                        <div class="prazo-conclusao">
+
+                        </div>
+
+                        <div class="validade">
+
+                        </div>
+
+                        <div class="observacoes">
+
+                        </div>
+
+
+                    </section>
                 </div>
 
+                <div class="rodape">
+
+                </div>
             </div>
 
             <script src="{{ url_for('static', filename='js/script.js') }}"></script>
