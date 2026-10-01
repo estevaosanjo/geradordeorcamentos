@@ -1,6 +1,5 @@
 *{
     font-family:"Montserrat",sans-serif;
-    padding:20px;
     display: center;
     justify-content:center;
 }
@@ -14,10 +13,12 @@
 }
 
 .cabecalho {
+    padding: 20px;
     width: 100%;
 }
 
 #logo{
+    padding: 10px;
     display: block;
     font: "Montserrat", sans-serif;
     border-radius: 5px;
@@ -25,15 +26,16 @@
 }
 
 .formatos{
+    margin-bottom: 20px;
+    font-size: 8px;
 }
 
 .dados_empresa{
+    padding-top: 10px;
     font-size: 12px;
-    gap: 2px;
 }
 
 #nome_empresa{
-
     box-shadow: 1px 1px 3px #d46b6b;
     border-radius: 6px;
     border: none;
@@ -50,17 +52,12 @@
     box-shadow: 1px 1px 3px #d46b6b;
     border-radius: 6px;
     border: none;
+    padding-bottom: 20px;
 }
 
-button[type="submit"]{
-    box-shadow: 0 1px 3px  #d46b6b;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
 
 .conteudo{
-
+    padding-top: 5px;
 }
 
 .title {
@@ -85,6 +82,13 @@ button[type="submit"]{
 }
 
 
+
+.tabela-orc{
+    font-size: 14px;
+    padding-top: 2%;
+    margin-bottom: 3%;
+}
+
 .adicionar_servico{
     font-size: 16px;
     padding-top: 10%;
@@ -103,6 +107,14 @@ button[type="submit"]{
     border-radius: 5px;
     border: none;
     cursor: pointer;
+}
+
+
+#gerar-orcamento{
+    box-shadow: 0 1px 3px  #d46b6b;
+    border-radius: 5px;
+    border: none;
+    justify-content: center;
 }
 
 

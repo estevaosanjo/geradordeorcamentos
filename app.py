@@ -8,6 +8,7 @@ app = Flask(__name__)
 def inicio():
     return render_template("index.html")
 
+
 @app.route("/gerar-orcamentos", methods=["POST"])
 def gerarorcamento():
 
@@ -19,7 +20,6 @@ def gerarorcamento():
         print("Logo não recebida")
 
     return "Orçamento recebido"
-
 
 if __name__ == "__main__":
     server = Server(app.wsgi_app)
