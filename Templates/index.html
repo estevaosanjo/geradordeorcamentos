@@ -85,45 +85,79 @@
                     </div>
 
                     <section class="tabela-orc">
-                      
                         <table>
-
                             <thead>
+                                <th style="width: 24%;">Serviço</th>
 
-                                <th>Descrição</th>
+                                <th style="width: 44%;">Descrição</th>
 
-                                <th>Quantidade</th>
+                                <th style="width: 8%;">Quantidade</th>
 
-                                <th>Valor Unitário</th>
+                                <th style="width: 12%;">Valor Unitário</th>
 
-                                <th>Valor Total</th>
-
+                                <th style="width: 12%;">Total</th>
                             </thead>
-
+                            <tbody id="tabela">
+                                <tr>
+                                    <td>
+                                        <textarea class="servico" placeholder="Serviço"></textarea>
+                                    </td>
+                                    <td>
+                                        <textarea class="descricao" placeholder="Descrição"></textarea>
+                                    </td>
+                                    <td>
+                                        <input type="number" class="quantidade" placeholder="Quantidade" step="1" min="0">
+                                    </td>
+                                    <td>
+                                        <input type="number" class="valor-unitario" placeholder="Valor Unitário" step="1" min="0">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="total" placeholder="Total" readonly>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                             <button type="button" id="adicionar-servico">Adicionar Serviço</button>
                             <button type="button" id="remover-servico">Remover Serviço</button>
 
-                        </table>
-
+                                            <div class="caixa-total">
+ 
+                        <div class="tit-total">
+                            TOTAL
+                        </div>
+ 
+                        <div class="valor-total" id="valorTotal">
+                            R$ 0,00
+                        </div>
+ 
+                        </div>
 
                     </section>
 
                     <section class ="cards-orcamento">
 
                         <div class="forma-pagamento">
-
+                            <h3>
+                                Forma de pagamento 
+                            </h3>
                         </div>
 
                         <div class="prazo-conclusao">
-
+                            <h3>
+                                Prazo de conclusão  
+                            </h3>
                         </div>
 
                         <div class="validade">
-
+                            <h3>
+                                Validade do orçamento
+                            </h3>
                         </div>
 
                         <div class="observacoes">
-
+                            <h3>
+                                Observações
+                            </h3>
                         </div>
 
 

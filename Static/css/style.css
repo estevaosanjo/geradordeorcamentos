@@ -89,6 +89,9 @@
     margin-bottom: 3%;
 }
 
+#tabela{
+    border-color: #d46b6b;
+}
 .adicionar_servico{
     font-size: 16px;
     padding-top: 10%;
@@ -109,6 +112,10 @@
     cursor: pointer;
 }
 
+.observacoes{
+    padding-top: 20px;
+    justify-content: center;
+}
 
 #gerar-orcamento{
     box-shadow: 0 1px 3px  #d46b6b;
