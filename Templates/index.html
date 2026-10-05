@@ -14,6 +14,7 @@
 
     </head>
         <body>
+
             <div class="pagina">
 
                 <header class = "cabecalho">
@@ -73,13 +74,13 @@
                         </div>
                         
                         <div class="quantidade_orc">
-                            <label for="quantidade_orc">Quantidade</label>
-                            <input type="text" id="quantidade_orc" name="quantidade_orc" placeholder="Quantidade">
+                            <label for="quantidade_orc">Nº do orçamento</label>
+                            <input type="text" id="quantidade_orc" name="quantidade_orc" placeholder="Nº do orçamento">
                         </div>
 
                         <div class="data_orc">
                             <label for="data_orc">Data do orçamento</label>
-                            <input type="text" id="data_orc" name="data_orc" placeholder="Data do orçamento">
+                            <input type="date" id="data_orc" name="data_orc" placeholder="Data do orçamento">
                         </div>
                         
                     </div>
@@ -134,39 +135,41 @@
 
                     </section>
 
-                    <section class ="cards-orcamento">
+                    <section class ="informacoes-orcamento">
 
                         <div class="forma-pagamento">
-                            <h3>
-                                Forma de pagamento 
-                            </h3>
+                            <h4>
+                                <i class="fa-regular fa-credit-card" aria-hidden="true"></i>
+                                Forma de pagamento
+                            </h4>
                         </div>
 
                         <div class="prazo-conclusao">
-                            <h3>
+                            <h4>
+                                <i class="fa-regular fa-clock" aria-hidden="true"></i>
                                 Prazo de conclusão  
-                            </h3>
+                            </h4>
                         </div>
 
                         <div class="validade">
-                            <h3>
-                                Validade do orçamento
-                            </h3>
+                            <h4>
+                                <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                                Validade
+                            </h4>
+        
+                            <input type="text" placeholder="Ex.: 10 dias">
                         </div>
 
                         <div class="observacoes">
                             <h3>
+                                <i class="fa-regular fa-comment" aria-hidden="true"></i>
                                 Observações
                             </h3>
                         </div>
 
-
                     </section>
                 </div>
 
-                <div class="rodape">
-
-                </div>
             </div>
 
             <script src="{{ url_for('static', filename='js/script.js') }}"></script>

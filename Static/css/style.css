@@ -76,10 +76,15 @@
     padding-left: 2%;
     box-shadow: 1px 1px 3px #d46b6b;
 }
-.data_orc{
-    padding-left: 2%;
-    box-shadow: 1px 1px 3px #d46b6b;
+
+input[type="date" i] {
+    text-autospace: no-autospace !important;
+    font-family: monospace;
+    padding-inline-start: 1px;
+    cursor: default;
+    padding: 0px;
 }
+
 
 
 
@@ -112,11 +117,22 @@
     cursor: pointer;
 }
 
-.observacoes{
-    padding-top: 20px;
-    justify-content: center;
+.informacoes-orcamento{
+    padding: 20px;
+    display: flex;
 }
+.forma-pagamento{
+    padding-right: 5px;
+}
+.prazo-conclusao{
+    padding-right: 5px;
+}
+.validade{
 
+}
+.observacoes{
+    padding-right: 5px;
+}
 #gerar-orcamento{
     box-shadow: 0 1px 3px  #d46b6b;
     border-radius: 5px;
