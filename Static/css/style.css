@@ -3,7 +3,9 @@
     display: center;
     justify-content:center;
 }
-
+body{
+    background-color: rgb(228, 185, 129);
+}
 .pagina  {
     width:198mm;
     min-height:286mm;
@@ -128,10 +130,22 @@ input[type="date" i] {
     padding-right: 5px;
 }
 .validade{
-
+    padding-left: 10px;
 }
 .observacoes{
+    display: block;
     padding-right: 5px;
+}
+
+.rodape{
+    margin-left: 20px;
+    padding-top: 600px;
+    color: rgb(148, 144, 144);
+}
+
+.rodape a{
+    color: rgb(128, 190, 240);
+    text-decoration-line: none;
 }
 #gerar-orcamento{
     box-shadow: 0 1px 3px  #d46b6b;
