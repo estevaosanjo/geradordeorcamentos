@@ -13,89 +13,73 @@
         rel="stylesheet">
 
     </head>
-        <body>
+    <body>
+    <div class="pagina">
+        <form action="gerar_orcamento" method="post" enctype="multipart/form-data">
+            <header class = "cabecalho">
+                <div class="logo">
+                    <label for="logo">Logo da empresa</label>
+                    <input type="file" id="logo" name="logo" accept="image/png, image/jpeg, image/webp">
+                    <small class="formatos">Formatos aceito: PNG, JPEG, WEBP</small>
+                </div>
 
-            <div class="pagina">
-
-                <header class = "cabecalho">
-
-                    <form action="gerar_orcamento" method="post" enctype="multipart/form-data">
-                        
-                        <div class="logo">
-                            <label for="logo">Logo da empresa</label>
-                            <input type="file" id="logo" name="logo" accept="image/png, image/jpeg, image/webp">
-                            <small class="formatos">Formatos aceito: PNG, JPEG, WEBP</small>
-                        </div>
-
-                    </form>
-
-                    <div class="dados_empresa">
-                        
-                        <label for="nome_empresa">Nome da empresa</label>
-                        <input type="text" id="nome_empresa" name="nome_empresa" placeholder="Nome da empresa">
-                       
-                        <label for="cnpj">CNPJ</label>
-                        <input type="text" id="cnpj" name="CNPJ" placeholder="Digite o CNPJ">
+                <div class="dados_empresa">
+                    <label for="nome_empresa">Nome da empresa</label>
+                    <input type="text" id="nome_empresa" name="nome_empresa" placeholder="Nome da empresa">
                     
+                    <label for="cnpj">CNPJ</label>
+                    <input type="text" id="cnpj" name="CNPJ" placeholder="Digite o CNPJ">
+                </div>
+                
+                <div class="contato">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Digite o email">
+                    
+                    <label for="whatsapp">Whatsapp</label>
+                    <input type="text" id="whatsapp" name="whatsapp" placeholder="Digite o número do WhatsApp">
+                    
+                    <label for="instagram">Instagram</label>
+                    <input type="text" id="instagram" name="instagram" placeholder="Digite o Instagram">
+
+                    <label for="website">Website</label>
+                    <input type="text" id="website" name="website" placeholder="Digite o Website"> 
+                </div>
+
+                <button type="submit" id="gerar-orcamento">Gerar orçamento</button>
+
+            </header>
+
+            <main class="conteudo">
+                
+                <div class="titulo">
+                    <h1 class = "title">Orçamento</h1>
+                    <p class = "subtitle">Preencha os campos abaixo para gerar o orçamento da sua empresa.</p>
+                </div>
+
+                <div class="dados_cliente">
+                    <div class="campo_cliente">
+                        <label for="nome_cliente">Nome do cliente</label>
+                        <input type="text" id="nome_cliente" name="nome_cliente" placeholder="Nome do cliente">
                     </div>
                     
-                    <div class="contato">
-                    
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="Digite o email">
-                        
-                        <label for="whatsapp">Whatsapp</label>
-                        <input type="text" id="whatsapp" name="whatsapp" placeholder="Digite o número do WhatsApp">
-                       
-                        <label for="instagram">Instagram</label>
-                        <input type="text" id="instagram" name="instagram" placeholder="Digite o Instagram">
-
-                        <label for="website">Website</label>
-                        <input type="text" id="website" name="website" placeholder="Digite o Website">
-                    
+                    <div class="quantidade_orc">
+                        <label for="quantidade_orc">Nº orçamento</label>
+                        <input type="text" id="quantidade_orc" name="quantidade_orc" placeholder="Nº do orçamento">
                     </div>
 
-                    <button type="submit" id="gerar-orcamento">Gerar orçamento</button>
-
-                </header>
-
-                <div class="conteudo">
-                    
-                    <div class="titulo">
-                        <h1 class = "title">Orçamento</h1>
-                        <p class = "subtitle">Preencha os campos abaixo para gerar o orçamento da sua empresa.</p>
+                    <div class="data_orc">
+                        <label for="data_orc">Data orçamento</label>
+                        <input type="date" id="data_orc" name="data_orc" placeholder="Data do orçamento">
                     </div>
+                </div>
 
-                    <div class="dados_cliente">
-
-                        <div class="campo_cliente">
-                            <label for="nome_cliente">Nome do cliente</label>
-                            <input type="text" id="nome_cliente" name="nome_cliente" placeholder="Nome do cliente">
-                        </div>
-                        
-                        <div class="quantidade_orc">
-                            <label for="quantidade_orc">Nº do orçamento</label>
-                            <input type="text" id="quantidade_orc" name="quantidade_orc" placeholder="Nº do orçamento">
-                        </div>
-
-                        <div class="data_orc">
-                            <label for="data_orc">Data do orçamento</label>
-                            <input type="date" id="data_orc" name="data_orc" placeholder="Data do orçamento">
-                        </div>
-                        
-                    </div>
-
-                    <section class="tabela-orc">
+                <section class="tabela-orc">
                         <table>
                             <thead>
-                                <th style="width: 24%;">Serviço</th>
-
+                                <th style="width: 26%;">Serviço</th>
                                 <th style="width: 48%;">Descrição</th>
-
-                                <th style="width: 8%;">Quantidade</th>
-
-                                <th style="width: 8%;">Valor Unitário</th>
-
+                                <th style="width: 6%;">Qtd</th>
+                                <th style="width: 8%;">Valor Un.</th>
                                 <th style="width: 8%;">Total</th>
                             </thead>
                             <tbody id="tabela">
@@ -110,7 +94,7 @@
                                         <input type="number" class="quantidade" placeholder="Qtd" step="1" min="0">
                                     </td>
                                     <td>
-                                        <input type="number" class="valor-unitario" placeholder="Valor Uni." step="1" min="0">
+                                        <input type="number" class="valor-unitario" placeholder="Valor Un." step="1" min="0">
                                     </td>
                                     <td>
                                         <input type="text" class="total" placeholder="Total" readonly>
@@ -120,62 +104,58 @@
                         </table>
                             <button type="button" id="adicionar-servico">+ Adicionar Serviço</button>
                             <button type="button" id="remover-servico">- Remover Serviço</button>
- 
+
                         <div class="tit-total">
                             <h3>Total</h3>
                         </div>
- 
+
                         <div class="valor-total" id="valorTotal">
                             R$ 0,00
                         </div>
- 
-                        </div>
+                </section>
 
-                    </section>
+                <section class ="informacoes-orcamento">
+                    <div class="forma-pagamento">
+                        <h4>
+                            <i class="fa-regular fa-credit-card" aria-hidden="true"></i>
+                            Forma de pagamento
+                        </h4>
+                    </div>
 
-                    <section class ="informacoes-orcamento">
+                    <div class="prazo-conclusao">
+                        <h4>
+                            <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                            Prazo de conclusão  
+                        </h4>
+                    </div>
 
-                        <div class="forma-pagamento">
-                            <h4>
-                                <i class="fa-regular fa-credit-card" aria-hidden="true"></i>
-                                Forma de pagamento
-                            </h4>
-                        </div>
+                    <div class="validade">
+                        <h4>
+                            <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                            Validade
+                        </h4>
+    
+                        <input type="text" placeholder="Ex.: 10 dias">
+                    </div>
 
-                        <div class="prazo-conclusao">
-                            <h4>
-                                <i class="fa-regular fa-clock" aria-hidden="true"></i>
-                                Prazo de conclusão  
-                            </h4>
-                        </div>
+                    <div class="observacoes">
+                        <h3>
+                            <i class="fa-regular fa-comment" aria-hidden="true"></i>
+                            Observações
+                        </h3>
+                    </div>
+                </section>
 
-                        <div class="validade">
-                            <h4>
-                                <i class="fa-regular fa-calendar" aria-hidden="true"></i>
-                                Validade
-                            </h4>
-        
-                            <input type="text" placeholder="Ex.: 10 dias">
-                        </div>
+            </main>
+        </form>
 
-                        <div class="observacoes">
-                            <h3>
-                                <i class="fa-regular fa-comment" aria-hidden="true"></i>
-                                Observações
-                            </h3>
-                        </div>
-
-                    </section>
-                </div>
-
-                <div class="rodape">
-                    <p>Criado por <a href="https://github.com/estevaosanjo" target="_blank">Estevão S. Anjo</a></p>
-                    <label>
-                        <img src="/static/assinatura.png" alt="Assinatura"  width="80px" height="40px">
-                    </label>
-                </div>
-            </div>
-
-            <script src="{{ url_for('static', filename='js/script.js') }}"></script>
-        </body>
+        <footer class="rodape">
+            <p>Criado por <a href="https://github.com/estevaosanjo" target="_blank">Estevão S. Anjo</a></p>
+            <label>
+                <img src="/static/assinatura.png" alt="Assinatura"  width="40px" height="20px">
+            </label>
+        </footer>
+    </div>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    </body>
 </html>

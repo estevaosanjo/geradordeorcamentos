@@ -9,10 +9,14 @@ body{
     color:rgb(66, 64, 64) ;
     display:flex;
     justify-content:center;
+    min-height: 100vh;
+    padding: 20px;
 }
 .pagina  {
     width:198mm;
     min-height:286mm;
+    max-width: 100%;
+    margin: 0 auto;
     background:#fff;
     border:2px solid #d3cf04;
 }
@@ -26,7 +30,7 @@ body{
 
 #logo{
     display: block;
-    font: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     cursor: pointer;
 }
 
@@ -46,12 +50,8 @@ body{
     font-family: inherit;
 }
 
-
 .conteudo{
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 20px;
+    padding: 20px 20px;
 }
 
 .conteudo h1{
@@ -77,6 +77,7 @@ body{
     border: 1px solid black;
     padding: 15px ;
     border-radius: 20px;
+    margin:20px 0;
 }
 .dados_cliente label {
     display: flex;
@@ -90,7 +91,6 @@ input[type="date"] {
 .tabela-orc{
     padding-top: 20px;
     border: 1px solid #504f4f;
-    padding: 15px;
     border-radius: 20px;
 }
 .tabela-orc td input,
@@ -99,6 +99,7 @@ input[type="date"] {
     width: 100%;
     min-width: 0;
     font-size: 14px;
+    padding: 5px;
 }
 
 #adicionar-servico{
@@ -122,30 +123,21 @@ input[type="date"] {
     border-radius: 6px;
 }
 
-
-
-.informacoes-orcamento{
-
-}
-.informacoes-orcamento i{
-
-}
-
-
-
 .rodape{
-    margin-left: 20px;
-    padding-top: 600px;
+    margin: 20px;
     color: rgb(148, 144, 144);
+    font-size: 12px;
 }
 
 .rodape a{
-    white-space: pre-line;
     color: rgb(128, 190, 240);
     text-decoration-line: none;
 }
+
 #gerar-orcamento{
-    justify-content: center;
+    text-align: center;
+    margin: 0;
+    display: block;
 }
 
 
