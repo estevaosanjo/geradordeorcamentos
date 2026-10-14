@@ -92,6 +92,7 @@ input[type="date"] {
     padding-top: 20px;
     border: 1px solid #504f4f;
     border-radius: 20px;
+    flex-direction: column;
 }
 .tabela-orc td input,
 .tabela-orc td textarea {
@@ -103,6 +104,7 @@ input[type="date"] {
 }
 
 #adicionar-servico{
+    margin: 0 10px;
     font-size: 14px;
     background-color: #fae157 ;
     cursor:pointer;
@@ -111,17 +113,27 @@ input[type="date"] {
     border: 1px solid rgb(56, 56, 56);
     border-radius: 6px;
 }
-
 #remover-servico{
+    margin: 0 10px;
     width: 120px;
     height: 30px;
     font-size: 14px;
     background-color: #ec3030 ;
-    color: #ffffff;
     cursor: pointer;
     border: 1px solid rgb(56, 56, 56);
     border-radius: 6px;
 }
+
+.informacoes-orc input, textarea{
+    display: block;
+    font-size: 12px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: inherit;
+}
+
 
 .rodape{
     margin: 20px;
@@ -135,8 +147,12 @@ input[type="date"] {
 }
 
 #gerar-orcamento{
+    background-color: rgb(241, 213, 49);
+    border: 2px solid rgb(31, 26, 2);
+    border-radius: 6px;
     text-align: center;
-    margin: 0;
+    margin: 10px 300px;
+    padding: 2%;
     display: block;
 }
 
