@@ -45,7 +45,7 @@
                     <input type="text" id="website" name="website" placeholder="Digite o Website"> 
                 </div>
 
-                <button type="submit" id="gerar-orcamento">Gerar orçamento</button>
+                
 
             </header>
 
@@ -102,16 +102,22 @@
                                 </tr>
                             </tbody>
                         </table>
-                            <button type="button" id="adicionar-servico">+ Adicionar Serviço</button>
-                            <button type="button" id="remover-servico">- Remover Serviço</button>
 
-                        <div class="tit-total">
-                            <h3>Total</h3>
+                        <div class="meio-tabela">
+                            <div class="botoes-servicos">
+                                <button type="button" id="adicionar-servico">Adicionar Serviço</button>
+                                <button type="button" id="remover-servico">Remover Serviço</button>
+                            </div>
+                            <div class="caixa-total">
+                                <div class="tit-total">
+                                    Total
+                                </div>
+                                <div class="valor-total" id="valorTotal">
+                                    R$ 0,00
+                                </div>
+                            </div>
                         </div>
 
-                        <div class="valor-total" id="valorTotal">
-                            R$ 0,00
-                        </div>
                 </section>
 
                 <section class ="informacoes-orc">
@@ -148,6 +154,12 @@
                         <textarea placeholder="Digite suas observações"></textarea>
                     </div>
                 </section>
+                
+                <div class="acoes">
+                    <button type="submit" id="gerar-orcamento-pdf">
+                     <span aria-hidden="true">📄</span> Gerar PDF
+                    </button>
+                </div>
 
             </main>
         </form>

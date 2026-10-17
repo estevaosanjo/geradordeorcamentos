@@ -5,7 +5,7 @@
 }
 body{
     font-family:"Montserrat",sans-serif;
-    background-color: rgb(228, 185, 129);
+    background-color: rgb(245, 196, 133);
     color:rgb(66, 64, 64) ;
     display:flex;
     justify-content:center;
@@ -18,7 +18,7 @@ body{
     max-width: 100%;
     margin: 0 auto;
     background:#fff;
-    border:2px solid #d3cf04;
+    border:2px solid #ffce39;
 }
 
 .cabecalho {
@@ -45,7 +45,7 @@ body{
     font-size: 12px;
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid#ebe6e6;
     border-radius: 6px;
     font-family: inherit;
 }
@@ -74,7 +74,7 @@ body{
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 16px;
-    border: 1px solid black;
+    border: 1px solid #ebe6e6;
     padding: 15px ;
     border-radius: 20px;
     margin:20px 0;
@@ -88,9 +88,11 @@ input[type="date"] {
     cursor: default;
 }
 
+
+/* Tabela */
 .tabela-orc{
     padding-top: 20px;
-    border: 1px solid #504f4f;
+    border: 1px solid #ebe6e6;
     border-radius: 20px;
     flex-direction: column;
 }
@@ -102,39 +104,83 @@ input[type="date"] {
     font-size: 14px;
     padding: 5px;
 }
+.tabela-orc table {
+    width: 100%;
+    border-collapse: collapse;
+}
 
-#adicionar-servico{
-    margin: 0 10px;
-    font-size: 14px;
-    background-color: #fae157 ;
+.tabela-orc th,
+.tabela-orc td {
+    border: 1px solid #ebe6e6;
+    padding: 8px;
+}
+
+.caixa-total{
+    padding: 15px 10px;
+    font-weight: bold;
+    display: grid;
+}
+
+
+
+/* Adicionar e Remover Serviços */
+.meio-tabela {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+.botoes-servico {
+    display: flex;
+    gap: 10px;
+}
+#adicionar-servico {
+    margin: 10px 0 20px;
+    font-size: 16px;
+    background-color: #ffce39;
     cursor:pointer;
     width: 120px;
-    height: 30px;
-    border: 1px solid rgb(56, 56, 56);
+    height: 60px;
+    border: none;
     border-radius: 6px;
+    font-weight: 500;
 }
 #remover-servico{
     margin: 0 10px;
     width: 120px;
-    height: 30px;
-    font-size: 14px;
+    height: 60px;
+    font-size: 16px;
     background-color: #ec3030 ;
     cursor: pointer;
-    border: 1px solid rgb(56, 56, 56);
+    border: none;
     border-radius: 6px;
+    font-weight:500;
 }
 
-.informacoes-orc input, textarea{
-    display: block;
+
+.informacoes-orc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.informacoes-orc input,
+.informacoes-orc textarea {
     font-size: 12px;
     width: 100%;
+    margin-top: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #ebe6e6;
     border-radius: 6px;
     font-family: inherit;
 }
+.observacoes{
+    width: 100%;
+}
 
 
+/* Roda-pé */
 .rodape{
     margin: 20px;
     color: rgb(148, 144, 144);
@@ -146,14 +192,14 @@ input[type="date"] {
     text-decoration-line: none;
 }
 
-#gerar-orcamento{
-    background-color: rgb(241, 213, 49);
-    border: 2px solid rgb(31, 26, 2);
+#gerar-orcamento-pdf{
+    cursor: pointer;
+    background-color: #ffce39;
+    border: none;
     border-radius: 6px;
-    text-align: center;
-    margin: 10px 300px;
-    padding: 2%;
-    display: block;
+    font-size: 18px;
+    padding: 16px 45px;
+    font-weight: bold;
 }
 
 
