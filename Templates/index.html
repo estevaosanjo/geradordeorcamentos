@@ -11,6 +11,8 @@
 
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap"
         rel="stylesheet">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     </head>
     <body>
@@ -29,14 +31,14 @@
                     
                     <label for="cnpj">CNPJ</label>
                     <input type="text" id="cnpj" name="CNPJ" placeholder="Digite o CNPJ">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Digite o E-mail">
                 </div>
                 
-                <div class="contato">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" placeholder="Digite o email">
-                    
+                <div class="contato">  
                     <label for="whatsapp">Whatsapp</label>
-                    <input type="text" id="whatsapp" name="whatsapp" placeholder="Digite o número do WhatsApp">
+                    <input type="text" id="whatsapp" name="whatsapp" placeholder="Digite o WhatsApp">
                     
                     <label for="instagram">Instagram</label>
                     <input type="text" id="instagram" name="instagram" placeholder="Digite o Instagram">
@@ -76,11 +78,11 @@
                 <section class="tabela-orc">
                         <table>
                             <thead>
-                                <th style="width: 26%;">Serviço</th>
-                                <th style="width: 48%;">Descrição</th>
-                                <th style="width: 6%;">Qtd</th>
-                                <th style="width: 8%;">Valor Un.</th>
-                                <th style="width: 8%;">Total</th>
+                                <th style="width: 30%;">Serviço</th>
+                                <th style="width: 42%;">Descrição</th>
+                                <th style="width: 8%;">Qtd</th>
+                                <th style="width: 10%;">Valor Un.</th>
+                                <th style="width: 10%;">Total</th>
                             </thead>
                             <tbody id="tabela">
                                 <tr>
@@ -91,13 +93,13 @@
                                         <textarea class="descricao" placeholder="Descrição"></textarea>
                                     </td>
                                     <td>
-                                        <input type="number" class="quantidade" placeholder="Qtd" step="1" min="0">
+                                        <input type="number" class="quantidade" placeholder="0" step="1" min="0">
                                     </td>
                                     <td>
-                                        <input type="number" class="valor-unitario" placeholder="Valor Un." step="1" min="0">
+                                        <input type="number" class="valor-unitario" placeholder="0,00" step="0.01" min="0">
                                     </td>
                                     <td>
-                                        <input type="text" class="total" placeholder="Total" readonly>
+                                        <input type="text" class="total" placeholder="0,00" readonly>
                                     </td>
                                 </tr>
                             </tbody>
@@ -105,8 +107,8 @@
 
                         <div class="meio-tabela">
                             <div class="botoes-servicos">
-                                <button type="button" id="adicionar-servico">Adicionar Serviço</button>
-                                <button type="button" id="remover-servico">Remover Serviço</button>
+                                <button type="button" id="adicionar-servico">+ Adicionar Serviço</button>
+                                <button type="button" id="remover-servico"><span aria-hidden="true">🗑</span> Remover Serviço</button>
                             </div>
                             <div class="caixa-total">
                                 <div class="tit-total">
@@ -121,23 +123,23 @@
                 </section>
 
                 <section class ="informacoes-orc">
-                    <div class="forma-pagamento">
+                    <div class="box">
                         <h4>
                             <i class="fa-regular fa-credit-card" aria-hidden="true"></i>
                             Forma de pagamento
                         </h4>
-                        <input type="text" placeholder="Ex.: 50% de entrada e 50% na entrega">
+                        <input type="text" placeholder="Ex.: PIX, Dinheiro, Cartão">
                     </div>
 
-                    <div class="prazo-conclusao">
+                    <div class="box">
                         <h4>
                             <i class="fa-regular fa-clock" aria-hidden="true"></i>
                             Prazo de conclusão  
                         </h4>
-                        <input type="text" placeholder="Ex.: 10 dias">
+                        <input type="text" placeholder="Ex.: 2 dias">
                     </div>
 
-                    <div class="validade">
+                    <div class="box">
                         <h4>
                             <i class="fa-regular fa-calendar" aria-hidden="true"></i>
                             Validade
@@ -146,7 +148,7 @@
                         <input type="text" placeholder="Ex.: 10 dias">
                     </div>
 
-                    <div class="observacoes">
+                    <div class="box-observacoes">
                         <h3>
                             <i class="fa-regular fa-comment" aria-hidden="true"></i>
                             Observações

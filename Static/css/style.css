@@ -22,36 +22,86 @@ body{
 }
 
 .cabecalho {
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
     width: 100%;
 }
 
-#logo{
+.logo {
+    grid-column: 1 / -1;
+}
+
+.dados_empresa,
+.contato {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+}
+
+.cabecalho label {
     display: block;
-    font-family: "Montserrat", sans-serif;
-    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
 }
 
-.formatos{
-    margin-bottom: 20px;
-    padding-bottom: 20px;
+.dados_empresa input,
+.contato input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 10px;
+    border: 1px solid #ebe6e6;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 12px;
+    box-sizing: border-box;
 }
 
+.logo input {
+    display: block;
+    margin: 8px 0;
+}
+
+.formatos {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    color: #777;
+}
+
+@media (max-width: 600px) {
+    .cabecalho {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        grid-column: 1;
+    }
+}
+
+
+
+/* Conteúdo */
 .dados_cliente input,
 .dados_empresa input,
 .contato input {
+    display: flex;
     font-size: 12px;
-    width: 100%;
     padding: 10px;
-    border: 1px solid#ebe6e6;
+    border: 1px solid  rgb(233, 233, 233);
     border-radius: 6px;
     font-family: inherit;
+    
 }
 
 .conteudo{
+    font-size: 16px;
     padding: 20px 20px;
+    border: 1px dra black;
 }
 
 .conteudo h1{
@@ -67,16 +117,33 @@ body{
 }
 
 .conteudo label{
-    font-size: 14px;
+    font-size: 16px;
+}
+.conteudo input {
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    border-bottom: 1px solid rgb(233, 233, 233);
+    border-radius: 0;
+    outline: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 12px;
+    box-sizing: border-box;
+}
+
+.conteudo input:focus {
+    outline: none;
+    border-bottom: 2px solid rgb(233, 233, 233);
 }
 
 .dados_cliente {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 16px;
-    border: 1px solid #ebe6e6;
+    border: 1px solid rgb(233, 233, 233);
     padding: 15px ;
-    border-radius: 20px;
+    border-radius: 10px;
     margin:20px 0;
 }
 .dados_cliente label {
@@ -89,38 +156,44 @@ input[type="date"] {
 }
 
 
+
 /* Tabela */
-.tabela-orc{
-    padding-top: 20px;
-    border: 1px solid #ebe6e6;
-    border-radius: 20px;
-    flex-direction: column;
-}
-.tabela-orc td input,
-.tabela-orc td textarea {
-    font-family: inherit;
-    width: 100%;
-    min-width: 0;
-    font-size: 14px;
-    padding: 5px;
-}
 .tabela-orc table {
     width: 100%;
     border-collapse: collapse;
+    border-spacing: 0;
 }
 
 .tabela-orc th,
 .tabela-orc td {
-    border: 1px solid #ebe6e6;
+    border: 1px solid #ccc;
     padding: 8px;
 }
 
-.caixa-total{
-    padding: 15px 10px;
-    font-weight: bold;
-    display: grid;
+.tabela-orc td input,
+.tabela-orc td textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 5px;
+    font-family: inherit;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    border-radius: 0;
+    outline: none;
+    background: transparent;
+    box-sizing: border-box;
 }
 
+.tabela-orc td textarea {
+    resize: none;
+}
+
+.tabela-orc td input:focus,
+.tabela-orc td textarea:focus {
+    border-bottom: 2px solid #333;
+}
 
 
 /* Adicionar e Remover Serviços */
@@ -136,50 +209,140 @@ input[type="date"] {
     gap: 10px;
 }
 #adicionar-servico {
-    margin: 10px 0 20px;
-    font-size: 16px;
+    margin: 20px 15px;
+    font-size: 14px;
     background-color: #ffce39;
     cursor:pointer;
-    width: 120px;
-    height: 60px;
+    width: 150px;
+    height: 40px;
     border: none;
     border-radius: 6px;
-    font-weight: 500;
+    font-weight: bolder;
 }
 #remover-servico{
-    margin: 0 10px;
-    width: 120px;
-    height: 60px;
-    font-size: 16px;
+    color: #ebe6e6;
+    margin: 0 5px;
+    width: 150px;
+    height: 40px;
+    font-size: 14px;
     background-color: #ec3030 ;
     cursor: pointer;
     border: none;
     border-radius: 6px;
-    font-weight:500;
+    font-weight:bolder;
 }
-.informacoes-orc{
+
+.caixa-total {
+    padding: 15px 10px;
+    font-weight: bold;
+    display: grid;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+    align-items: stretch;
+    border: 1px solid rgb(233, 233, 233);
+    padding: 0;
 }
+
+.tit-total,
+.valor-total {
+    
+    padding: 10px 14px;
+    margin-left: 7px;
+}
+
+.valor-total {
+    border-left: 1px solid rgb(233, 233, 233);
+}
+
+
+
+
+/* Seção de informações do orçamento */
+.informacoes-orc {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px 0;
+    align-items: stretch;
+}
+
+
+.informacoes-orc .box {
+    flex: 1 1 0;
+    min-width: 0;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 6px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+.informacoes-orc .box-observacoes {
+    width: 100%;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 6px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+
+.informacoes-orc h3,
+.informacoes-orc h4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+.informacoes-orc i {
+    font-size: 15px;
+    color: #333;
+}
+
+
 .informacoes-orc input,
 .informacoes-orc textarea {
-    font-size: 12px;
+    display: block;
     width: 100%;
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid #ebe6e6;
-    border-radius: 6px;
+    padding: 8px 0;
+    border: none;
+    border-bottom: 1px solid rgb(233, 233, 233);
+    border-radius: 0;
+    outline: none;
+    background: transparent;
     font-family: inherit;
+    font-size: 12px;
+    box-sizing: border-box;
 }
-.observacoes{
-    width: 100%;
+
+
+.informacoes-orc textarea {
+    min-height: 70px;
+    resize: vertical;
 }
+
+
+.informacoes-orc input:focus,
+.informacoes-orc textarea:focus {
+    border-bottom: 2px solid rgb(233, 233, 233);
+}
+
+
+.informacoes-orc input:focus-visible,
+.informacoes-orc textarea:focus-visible {
+    outline:none;
+    outline-offset: 3px;
+}
+
+
+
 
 
 /* Roda-pé */
 .rodape{
+    display: flex;
     margin: 20px;
     color: rgb(148, 144, 144);
     font-size: 12px;
