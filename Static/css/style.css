@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 body{
     font-family:"Montserrat",sans-serif;
@@ -11,6 +12,7 @@ body{
     justify-content:center;
     min-height: 100vh;
     padding: 20px;
+    
 }
 .pagina  {
     width:198mm;
@@ -18,7 +20,8 @@ body{
     max-width: 100%;
     margin: 0 auto;
     background:#fff;
-    border:2px solid #ffce39;
+    border:1px solid #ffc107;
+    box-shadow: 0 8px 25px rgba(78, 60, 1, 0.25);
 }
 
 .cabecalho {
@@ -27,6 +30,7 @@ body{
     gap: 20px;
     padding: 20px;
     width: 100%;
+    border: 1px dotted black;
 }
 
 .logo {
@@ -85,35 +89,29 @@ body{
 
 
 
-/* Conteúdo */
-.dados_cliente input,
-.dados_empresa input,
-.contato input {
-    display: flex;
-    font-size: 12px;
-    padding: 10px;
-    border: 1px solid  rgb(233, 233, 233);
-    border-radius: 6px;
-    font-family: inherit;
-    
+/* Titulo da tabela */
+.titulo{
+    padding: 10px 0 10px 20px;
+    border: 1px dotted black;
 }
-
-.conteudo{
-    font-size: 16px;
-    padding: 20px 20px;
-    border: 1px dra black;
-}
-
-.conteudo h1{
+.titulo h1{
+    padding: 5px 0;
     text-align: center;
-    font-size: 43px;
+    font-size: 46px;
 }
-
-.conteudo p {
-    padding-top: 10px;
+.titulo p {
+    padding: 20px 0 0 0;
     text-align: center;
     font-size: 14px;
-    padding-bottom: 20px;
+}
+
+
+
+/* Conteúdo */
+.conteudo{
+    font-size: 16px;
+    padding: 15px 15px;
+    border: 1px dotted black;
 }
 
 .conteudo label{
@@ -137,13 +135,25 @@ body{
     border-bottom: 2px solid rgb(233, 233, 233);
 }
 
+
+.dados_cliente input,
+.dados_empresa input,
+.contato input {
+    display: flex;
+    font-size: 12px;
+    padding: 10px;
+    border: 1px solid  rgb(233, 233, 233);
+    border-radius: 6px;
+    font-family: inherit;
+    
+}
 .dados_cliente {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 16px;
     border: 1px solid rgb(233, 233, 233);
     padding: 15px ;
-    border-radius: 10px;
+    border-radius: 6px;
     margin:20px 0;
 }
 .dados_cliente label {
@@ -160,14 +170,27 @@ input[type="date"] {
 /* Tabela */
 .tabela-orc table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: separate;
     border-spacing: 0;
+    border: 1px solid rgb(233, 233, 233);
+    border-radius: 6px;
+    overflow: hidden;
 }
 
 .tabela-orc th,
 .tabela-orc td {
-    border: 1px solid #ccc;
+    border: none;
+    border-right: 1px solid rgb(233, 233, 233);
     padding: 8px;
+}
+
+.tabela-orc th {
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.tabela-orc th:last-child,
+.tabela-orc td:last-child {
+    border-right: none;
 }
 
 .tabela-orc td input,
@@ -194,6 +217,31 @@ input[type="date"] {
 .tabela-orc td textarea:focus {
     border-bottom: 2px solid #333;
 }
+.tabela-orc th,
+.tabela-orc td {
+    padding: 12px 10px;
+    vertical-align: middle;
+}
+
+.tabela-orc td input,
+.tabela-orc td textarea {
+    width: 100%;
+    padding: 5px;
+    margin: 0;
+}
+
+.tabela-orc td textarea {
+    resize: none;
+}
+
+.tabela-orc th {
+    white-space: nowrap;
+}
+.tabela-orc .quantidade,
+.tabela-orc .valor-unitario,
+.tabela-orc .total {
+    text-align: center;
+}
 
 
 /* Adicionar e Remover Serviços */
@@ -211,7 +259,7 @@ input[type="date"] {
 #adicionar-servico {
     margin: 20px 15px;
     font-size: 14px;
-    background-color: #ffce39;
+    background-color: #ffd000;
     cursor:pointer;
     width: 150px;
     height: 40px;
@@ -219,17 +267,24 @@ input[type="date"] {
     border-radius: 6px;
     font-weight: bolder;
 }
+#adicionar-servico:hover{
+    background:#f8ca40;
+}
+
 #remover-servico{
     color: #ebe6e6;
-    margin: 0 5px;
+    margin: 0;
     width: 150px;
     height: 40px;
     font-size: 14px;
-    background-color: #ec3030 ;
+    background-color: #f73434 ;
     cursor: pointer;
     border: none;
     border-radius: 6px;
     font-weight:bolder;
+}
+#remover-servico:hover{
+    background:rgb(250, 68, 68)
 }
 
 .caixa-total {
@@ -239,17 +294,24 @@ input[type="date"] {
     display: flex;
     align-items: stretch;
     border: 1px solid rgb(233, 233, 233);
+    border-radius: 6px;
     padding: 0;
 }
 
-.tit-total,
-.valor-total {
-    
+.tit-total{
+    font-size: 22px;
     padding: 10px 14px;
-    margin-left: 7px;
+    margin-left: 12px;
+    border-radius: 6px;
 }
 
 .valor-total {
+    padding: 10px 14px;
+    margin-left: 12px;
+    border-radius: 6px;
+    font-size: 18px;
+    background-color: #7a7a7a;
+    color: #ffffff;
     border-left: 1px solid rgb(233, 233, 233);
 }
 
@@ -343,9 +405,9 @@ input[type="date"] {
 /* Roda-pé */
 .rodape{
     display: flex;
-    margin: 20px;
+    margin: 10px 0 10px 10px;
     color: rgb(148, 144, 144);
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .rodape a{
@@ -353,6 +415,18 @@ input[type="date"] {
     text-decoration-line: none;
 }
 
+.rodape label{
+    justify-content: center;
+}
+.acoes{
+    position: fixed;
+    right: 30p;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+    z-index: 9999;
+}
 #gerar-orcamento-pdf{
     cursor: pointer;
     background-color: #ffce39;
@@ -361,6 +435,10 @@ input[type="date"] {
     font-size: 18px;
     padding: 16px 45px;
     font-weight: bold;
+    box-shadow: 0 8px 25px rgba(29, 28, 28, 0.25);
+}
+#gerar-orcamento-pdf:hover {
+    background:#f0bf2d;
 }
 
 
