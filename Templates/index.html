@@ -53,124 +53,126 @@
                     <p class = "subtitle">Preencha os campos abaixo para gerar o orçamento da sua empresa.</p>
                 </div>
 
-
-            <main class="conteudo">
-                <div class="dados_cliente">
-                    <div class="campo_cliente">
-                        <label for="nome_cliente">Nome do cliente</label>
-                        <input type="text" id="nome_cliente" name="nome_cliente" placeholder="Nome do cliente">
-                    </div>
-                    
-                    <div class="quantidade_orc">
-                        <label for="quantidade_orc">Nº orçamento</label>
-                        <input type="text" id="quantidade_orc" name="quantidade_orc" placeholder="Nº do orçamento">
-                    </div>
-
-                    <div class="data_orc">
-                        <label for="data_orc">Data orçamento</label>
-                        <input type="date" id="data_orc" name="data_orc" placeholder="Data do orçamento">
-                    </div>
-                </div>
-
-                <section class="tabela-orc">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th style="width: 26%;">Serviço</th>
-                                    <th style="width: 34%;">Descrição</th>
-                                    <th style="width: 10%;">Qtd</th>
-                                    <th style="width: 16%;">Valor Un.</th>
-                                    <th style="width: 14%;">Total</th>
-                                </tr>   
-                            </thead>
-                            <tbody id="tabela">
-                                <tr>
-                                    <td>
-                                        <textarea class="servico" placeholder="Serviço"></textarea>
-                                    </td>
-                                    <td>
-                                        <textarea class="descricao" placeholder="Descrição"></textarea>
-                                    </td>
-                                    <td>
-                                        <input type="number" class="quantidade" placeholder="0" step="1" min="0">
-                                    </td>
-                                    <td>
-                                        <input type="number" class="valor-unitario" placeholder="0,00" step="0.01" min="0">
-                                    </td>
-                                    <td>
-                                        <input type="text" class="total" placeholder="0,00" readonly>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <div class="meio-tabela">
-                            <div class="botoes-servicos">
-                                <button type="button" id="adicionar-servico">+ Adicionar Serviço</button>
-                                <button type="button" id="remover-servico"><span aria-hidden="true">🗑</span> Remover Serviço</button>
-                            </div>
-                            <div class="caixa-total">
-                                <div class="tit-total">
-                                    Total
-                                </div>
-                                <div class="valor-total" id="valorTotal">
-                                    R$ 0,00
-                                </div>
-                            </div>
+             <div class="fundo-conteudo">
+                <main class="conteudo">
+                    <div class="dados_cliente">
+                        <div class="campo_cliente">
+                            <label for="nome_cliente">Nome do cliente</label>
+                            <input type="text" id="nome_cliente" name="nome_cliente" placeholder="Nome do cliente">
+                        </div>
+                        
+                        <div class="quantidade_orc">
+                            <label for="quantidade_orc">Nº orçamento</label>
+                            <input type="text" id="quantidade_orc" name="quantidade_orc" placeholder="Nº do orçamento">
                         </div>
 
-                </section>
-
-                <section class ="informacoes-orc">
-                    <div class="box">
-                        <h4>
-                            <i class="fa-regular fa-credit-card" aria-hidden="true"></i>
-                            Forma de pagamento
-                        </h4>
-                        <input type="text" placeholder="Ex.: PIX, Dinheiro, Cartão">
+                        <div class="data_orc">
+                            <label for="data_orc">Data orçamento</label>
+                            <input type="date" id="data_orc" name="data_orc" placeholder="Data do orçamento">
+                        </div>
                     </div>
 
-                    <div class="box">
-                        <h4>
-                            <i class="fa-regular fa-clock" aria-hidden="true"></i>
-                            Prazo de conclusão  
-                        </h4>
-                        <input type="text" placeholder="Ex.: 2 dias">
+                    <section class="tabela-orc">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th style="width: 26%;">Serviço</th>
+                                        <th style="width: 34%;">Descrição</th>
+                                        <th style="width: 10%;">Qtd</th>
+                                        <th style="width: 16%;">Valor Un.</th>
+                                        <th style="width: 14%;">Total</th>
+                                    </tr>   
+                                </thead>
+                                <tbody id="tabela">
+                                    <tr>
+                                        <td>
+                                            <textarea class="servico" placeholder="Serviço"></textarea>
+                                        </td>
+                                        <td>
+                                            <textarea class="descricao" placeholder="Descrição"></textarea>
+                                        </td>
+                                        <td>
+                                            <input type="number" class="quantidade" placeholder="0" step="1" min="0">
+                                        </td>
+                                        <td>
+                                            <input type="number" class="valor-unitario" placeholder="0,00" step="0.01" min="0">
+                                        </td>
+                                        <td>
+                                            <input type="text" class="total" placeholder="0,00" readonly>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="meio-tabela">
+                                <div class="botoes-servicos">
+                                    <button type="button" id="adicionar-servico">+ Adicionar Serviço</button>
+                                    <button type="button" id="remover-servico"><span aria-hidden="true">🗑</span> Remover Serviço</button>
+                                </div>
+                                <div class="caixa-total">
+                                    <div class="tit-total">
+                                        Total
+                                    </div>
+                                    <div class="valor-total" id="valorTotal">
+                                        R$ 0,00
+                                    </div>
+                                </div>
+                            </div>
+
+                    </section>
+
+                    <section class ="informacoes-orc">
+                        <div class="box">
+                            <h4>
+                                <i class="fa-regular fa-credit-card" aria-hidden="true"></i>
+                                Forma de pagamento
+                            </h4>
+                            <input type="text" placeholder="Ex.: PIX, Dinheiro, Cartão">
+                        </div>
+
+                        <div class="box">
+                            <h4>
+                                <i class="fa-regular fa-clock" aria-hidden="true"></i>
+                                Prazo de conclusão  
+                            </h4>
+                            <input type="text" placeholder="Ex.: 2 dias">
+                        </div>
+
+                        <div class="box">
+                            <h4>
+                                <i class="fa-regular fa-calendar" aria-hidden="true"></i>
+                                Validade
+                            </h4>
+        
+                            <input type="text" placeholder="Ex.: 10 dias">
+                        </div>
+
+                        <div class="box-observacoes">
+                            <h3>
+                                <i class="fa-regular fa-comment" aria-hidden="true"></i>
+                                Observações
+                            </h3>
+                            <textarea placeholder="Digite suas observações"></textarea>
+                        </div>
+                    </section>
+                    
+                    <div class="acoes">
+                        <button type="submit" id="gerar-orcamento-pdf">
+                        <span aria-hidden="true">📄</span> Gerar PDF
+                        </button>
                     </div>
 
-                    <div class="box">
-                        <h4>
-                            <i class="fa-regular fa-calendar" aria-hidden="true"></i>
-                            Validade
-                        </h4>
-    
-                        <input type="text" placeholder="Ex.: 10 dias">
-                    </div>
-
-                    <div class="box-observacoes">
-                        <h3>
-                            <i class="fa-regular fa-comment" aria-hidden="true"></i>
-                            Observações
-                        </h3>
-                        <textarea placeholder="Digite suas observações"></textarea>
-                    </div>
-                </section>
-                
-                <div class="acoes">
-                    <button type="submit" id="gerar-orcamento-pdf">
-                     <span aria-hidden="true">📄</span> Gerar PDF
-                    </button>
-                </div>
-
-            </main>
+                </main>
+             </div>
         </form>
 
-        <footer class="rodape">
-            <p>Criado por <a href="https://github.com/estevaosanjo" target="_blank">Estevão S. Anjo</a></p>
-            <label>
-                <img src="/static/assinatura.png" alt="Assinatura"  width="35px" height="20px">
-            </label>
-        </footer>
+            <footer class="rodape">
+                <p>Criado por <a href="https://github.com/estevaosanjo" target="_blank">Estevão S. Anjo</a></p>
+                <label>
+                    <img src="/static/assinatura.png" alt="Assinatura"  width="35px" height="20px">
+                </label>
+            </footer>
+
     </div>
         <script src="{{ url_for('static', filename='js/script.js') }}"></script>
     </body>
