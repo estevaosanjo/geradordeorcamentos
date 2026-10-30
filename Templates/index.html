@@ -17,7 +17,7 @@
     </head>
     <body>
     <div class="pagina">
-        <form action="gerar_orcamento" method="post" enctype="multipart/form-data">
+        <form action="{{ url_for('gerarorcamento') }}" method="post" enctype="multipart/form-data">
             <header class = "cabecalho">
                 <div class="logo">
                     <label for="logo">Logo da empresa</label>
@@ -86,19 +86,19 @@
                                 <tbody id="tabela">
                                     <tr>
                                         <td>
-                                            <textarea class="servico" placeholder="Serviço"></textarea>
+                                            <textarea class="servico" name="servico" placeholder="Serviço"></textarea>
                                         </td>
                                         <td>
-                                            <textarea class="descricao" placeholder="Descrição"></textarea>
+                                            <textarea class="descricao" name="descricao" placeholder="Descrição"></textarea>
                                         </td>
                                         <td>
-                                            <input type="number" class="quantidade" placeholder="0" step="1" min="0">
+                                            <input type="number" name="quantidade" class="quantidade" placeholder="0" step="1" min="0">
                                         </td>
                                         <td>
-                                            <input type="number" class="valor-unitario" placeholder="0,00" step="0.01" min="0">
+                                            <input type="number" name="valor_unitario" class="valor-unitario" placeholder="0,00" step="0.01" min="0">
                                         </td>
                                         <td>
-                                            <input type="text" class="total" placeholder="0,00" readonly>
+                                            <input type="text" name="total" class="total" placeholder="0,00" readonly>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -127,7 +127,7 @@
                                 <i class="fa-regular fa-credit-card" aria-hidden="true"></i>
                                 Forma de pagamento
                             </h4>
-                            <input type="text" placeholder="Ex.: PIX, Dinheiro, Cartão">
+                            <input type="text" name="forma_pagamento" placeholder="Ex.: PIX, Dinheiro, Cartão">
                         </div>
 
                         <div class="box">
@@ -135,7 +135,7 @@
                                 <i class="fa-regular fa-clock" aria-hidden="true"></i>
                                 Prazo de conclusão  
                             </h4>
-                            <input type="text" placeholder="Ex.: 2 dias">
+                            <input type="text" name="prazo_conclusao" placeholder="Ex.: 2 dias">
                         </div>
 
                         <div class="box">
@@ -144,7 +144,7 @@
                                 Validade
                             </h4>
         
-                            <input type="text" placeholder="Ex.: 10 dias">
+                            <input type="text" name="validade" placeholder="Ex.: 10 dias">
                         </div>
 
                         <div class="box-observacoes">
@@ -152,7 +152,7 @@
                                 <i class="fa-regular fa-comment" aria-hidden="true"></i>
                                 Observações
                             </h3>
-                            <textarea placeholder="Digite suas observações"></textarea>
+                            <textarea name="observacoes" placeholder="Digite suas observações"></textarea>
                         </div>
                     </section>
                     
